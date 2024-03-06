@@ -392,6 +392,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 
 @media (max-width: 991px){
@@ -414,7 +415,7 @@ body {
 }
 
 .About .About-content .image::before {
-    content: "";
+    content:"";
     position: absolute;
     border-left: 80px solid var(--main-color);
     width: 120px;
@@ -430,9 +431,9 @@ body {
     width: 120px;
     height: 300px;
     border-left: 80px solid var(--main-color);
-    z-index: -1;
     right: -163px;
     top: -50px;
+    z-index: -1;
 }
 
 .About .About-content .image img {
@@ -531,5 +532,4 @@ body {
     font-weight: bold;
     color: var(--main-color);
 }
-
 /** End Footer **/
