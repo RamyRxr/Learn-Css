@@ -381,13 +381,12 @@ body {
 /*! ---------------------------------------------------------------------------------------------------------------------------------------------- !*/
 
 /** Start About **/
-.About {
+.about {
     padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) + 60px);
-    background-color: var(--section-background);
 }
 
-.About .About-content {
+.about .about-content {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -396,25 +395,25 @@ body {
 }
 
 @media (max-width: 991px){
-    .About .About-content {
+    .about .about-content {
         flex-direction: column;
         text-align: center;
     }
 }
 
-.About .About-content .image {
+.about .about-content .image {
     position: relative;
     width: 250px;
     height: 375px;
 }
 
 @media (max-width: 991px){
-    .About .About-content .image {
+    .about .about-content .image {
         margin: 0 auto 60px;
     }
 }
 
-.About .About-content .image::before {
+.about .about-content .image::before {
     content:"";
     position: absolute;
     border-left: 80px solid var(--main-color);
@@ -425,7 +424,7 @@ body {
     z-index: -1;
 }
 
-.About .About-content .image::after {
+.about .about-content .image::after {
     content: "";
     position: absolute;
     width: 120px;
@@ -436,28 +435,28 @@ body {
     z-index: -1;
 }
 
-.About .About-content .image img {
+.about .about-content .image img {
     max-width: 100%;
 }
 
-.About .About-content .text {
+.about .about-content .text {
     flex-basis: calc(100% - 500px);
 }
 
-.About .About-content .text p:first-of-type {
+.about .about-content .text p:first-of-type {
     font-weight: bold;
     line-height: 2;
     margin-bottom: 50px;
 }
 
-.About .About-content .text hr {
+.about .about-content .text hr {
     width: 60%;
     display:inline-block;
     border: 2.5px solid;
     border-color: var(--main-color);
 }
 
-.About .About-content .text p:last-of-type {
+.about .about-content .text p:last-of-type {
     line-height: 2;
     color: #777;
 }
@@ -519,7 +518,6 @@ body {
 /*! ---------------------------------------------------------------------------------------------------------------------------------------------- !*/
 
 /** Start Footer **/
-
 .footer {
     background-color: var(--second-color);
     color: white;
