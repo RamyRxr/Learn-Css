@@ -5,8 +5,8 @@
     --second-color: #2c4755; 
     --section-padding: 60px;
     --section-background: aliceblue;
+    --main-transtaction: 0.3s; 
 }
-
 
 /** End Variables **/
 
@@ -47,6 +47,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -130,7 +134,7 @@ body {
 
 .header .links .icon span:nth-child(2) {
     width: 60%;
-    transition: .2s;
+    transition: var(--main-transtaction);
 } 
 
 .header .links .icon span:last-child {
@@ -169,7 +173,7 @@ body {
     padding: 15px;
     text-decoration: none;
     color : #333;  /*! To change !*/
-    transition: .3s;
+    transition: var(--main-transtaction);
 }
 
 .header .links ul li a:hover {
@@ -380,6 +384,7 @@ body {
 .About {
     padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) + 60px);
+    background-color: var(--section-background);
 }
 
 .About .About-content {
@@ -389,20 +394,33 @@ body {
     justify-content: space-between;
 }
 
+@media (max-width: 991px){
+    .About .About-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 .About .About-content .image {
     position: relative;
     width: 250px;
     height: 375px;
 }
 
+@media (max-width: 991px){
+    .About .About-content .image {
+        margin: 0 auto 60px;
+    }
+}
+
 .About .About-content .image::before {
     content: "";
     position: absolute;
-    background-color: #ebeced;
-    width: 100px;
-    height: calc(100% + 80PX);
-    top: -40;
-    left: -20px;
+    border-left: 80px solid var(--main-color);
+    width: 120px;
+    height: 300px;
+    left: -45px;
+    bottom: -50px;
     z-index: -1;
 }
 
@@ -412,16 +430,106 @@ body {
     width: 120px;
     height: 300px;
     border-left: 80px solid var(--main-color);
-    border-bottom: 80px solid var(--main-color);
     z-index: -1;
-    right: -150px;
-    top: -150px;
+    right: -163px;
+    top: -50px;
 }
 
 .About .About-content .image img {
     max-width: 100%;
 }
 
+.About .About-content .text {
+    flex-basis: calc(100% - 500px);
+}
 
+.About .About-content .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+.About .About-content .text hr {
+    width: 60%;
+    display:inline-block;
+    border: 2.5px solid;
+    border-color: var(--main-color);
+}
+
+.About .About-content .text p:last-of-type {
+    line-height: 2;
+    color: #777;
+}
 
 /** End About **/
+
+/*! ---------------------------------------------------------------------------------------------------------------------------------------------- !*/
+
+/** Start Contact **/
+
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + 60px);
+    background-color: var(--section-background);
+}
+
+.contact .info {
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + 60px);
+    text-align: center;
+}
+
+.contact .info .label {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--second-color);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .info .link {
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact .info .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact .info .social i {
+    margin-left: 10px;
+    color: var(--second-color);
+}
+
+@media (max-width: 767px) {
+    .contact .info .label , .contact .info .link {
+        font-size: 25px;
+    }
+}
+
+/** End Contact **/
+
+/*! ---------------------------------------------------------------------------------------------------------------------------------------------- !*/
+
+/** Start Footer **/
+
+.footer {
+    background-color: var(--second-color);
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/** End Footer **/
